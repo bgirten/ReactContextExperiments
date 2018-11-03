@@ -1,2 +1,2 @@
-# ReactContextExperiments
-new React Context experimments
+# stupid React Context experiments
+stupid React Context experimments
