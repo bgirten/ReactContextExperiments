@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import Person from './Person'
+import StatsContainer from './StatsContainer'
 
 const initialState = {
   clicksCount: 100,
@@ -30,8 +30,8 @@ class App extends Component<object, State> {
     return (
       <MyContext.Provider value={this.state}>
         <div>
-          <p>Martin is a wuss</p>
-          <Person />
+          <p>This is the App layer</p>
+          <StatsContainer />
         </div>
       </MyContext.Provider>
     );

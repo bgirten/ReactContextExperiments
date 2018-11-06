@@ -2,14 +2,14 @@ import * as React from 'react';
 import { Component } from 'react';
 
 import { MyContext } from './App'
-import { instanceOf } from 'prop-types';
 
-class Person extends Component {
+class StatsCard extends Component {
+
     handleFetchEvent = (updateStats: any) => {
         fetch(`https://api.github.com/`).then(response => {
             response.json().then(data => {
                 console.log("?????", data)
-                this.setState({ gitHubStats: updateStats("MAZA") })
+                this.setState({ gitHubStats: updateStats(data.current_user_url) })
             });
         })
     }
@@ -17,7 +17,8 @@ class Person extends Component {
     render() {
 console.log("render called")
       return (
-        <div className="person">
+        <div className="stats_card">
+          <p>This is the Statistics Card layer</p>
           <MyContext.Consumer>
             {context => (
               <>
@@ -44,10 +45,13 @@ console.log("render called")
                 <br />
                 &nbsp;&nbsp;&nbsp;
                 <button
-                  onClick={() => this.handleFetchEvent(context.updateGitHubStats)}
+                  onClick={ () => this.handleFetchEvent(context.updateGitHubStats) }
                 >
                   Fetch GitHub stats
                 </button>
+                <br />
+                <br />
+                <br />
                 {context.gitHubStats}
               </>
             )}
@@ -57,4 +61,4 @@ console.log("render called")
     }
   }
   
-  export default Person;
+  export default StatsCard;
