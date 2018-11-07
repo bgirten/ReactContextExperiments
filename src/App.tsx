@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import './App.css'
 
 import StatsContainer from './StatsContainer'
 
@@ -25,11 +26,11 @@ class App extends Component<object, State> {
   readonly state: State = initialState;
 
   render() {
-    console.log("It's HAMMER time");
     const { clicksCount } = this.state;
     return (
       <MyContext.Provider value={this.state}>
-        <div>
+
+        <div className="applayer">
           <p>This is the App layer</p>
           <StatsContainer />
         </div>
