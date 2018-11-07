@@ -1,0 +1,44 @@
+.statscard {
+  width: 300px;
+  height: 200px;
+  background: ivory;
+  margin: 32px;
+  border: solid 1px rgb(223, 219, 219);
+  border-radius: 8px;
+  box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+}
+
+.statscardtitle {
+  width: 100%;
+  text-align: center;
+}
+
+.clickscount {
+margin-left: 16px;
+}
+
+.clicksbutton {
+  width: 32px;
+  height: 32px;
+  background: teal;
+  color: white;
+  display: inline-block;
+  border-radius: 4px;
+  margin: 8px;
+  border: none;
+  font-size: 18px;
+}
+
+.githublink {
+  width: 140px;
+  height: 40px;
+  background: teal;
+  color: white;
+  margin: 8px 0px 0px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.githuboutput {
+  margin: 8px 0px 0px 16px;
+}

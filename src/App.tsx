@@ -31,7 +31,7 @@ class App extends Component<object, State> {
       <MyContext.Provider value={this.state}>
 
         <div className="applayer">
-          <p>This is the App layer</p>
+          <p className="appcomponent">Parent Component</p>
           <StatsContainer />
         </div>
       </MyContext.Provider>

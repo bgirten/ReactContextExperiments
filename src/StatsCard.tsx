@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Component } from 'react';
 
+import './StatsCard.css';
 import { MyContext } from './App'
 
 class StatsCard extends Component {
@@ -8,51 +9,45 @@ class StatsCard extends Component {
     handleFetchEvent = (updateStats: any) => {
         fetch(`https://api.github.com/`).then(response => {
             response.json().then(data => {
-                console.log("?????", data)
-                this.setState({ gitHubStats: updateStats(data.current_user_url) })
+                this.setState({ gitHubStats: updateStats(data.emojis_url) })
             });
         })
     }
 
     render() {
-console.log("render called")
       return (
-        <div className="stats_card">
-          <p>This is the Statistics Card layer</p>
+        <div className="statscard">
+          <p className="statscardtitle">Statistics Card</p>
           <MyContext.Consumer>
             {context => (
               <>
-                My clicks count is {context.clicksCount}
-                <br></br>
-                &nbsp;&nbsp;&nbsp;
-                <button
+                <span className="clickscount">My clicks count is {context.clicksCount}</span>
+
+                <button className="clicksbutton" 
                   onClick={() => {
                     return this.setState({ clicksCount: context.increaseClicks(1) });
                   }}
                 >
-                  UP
+                  +
                 </button>
-                &nbsp;&nbsp;&nbsp;
-                <button
+
+                <button className="clicksbutton" 
                   onClick={() => {
                     return this.setState({ clicksCount: context.decreaseClicks(1) });
                   }}
                 >
-                  DOWN
+                  -
                 </button>
-                <br />
-                <br />
-                <br />
-                &nbsp;&nbsp;&nbsp;
-                <button
+
+                <button className="githublink" 
                   onClick={ () => this.handleFetchEvent(context.updateGitHubStats) }
                 >
-                  Fetch GitHub stats
+                  GitHub emojis link
                 </button>
-                <br />
-                <br />
-                <br />
-                {context.gitHubStats}
+                <p className="githuboutput">
+                  {context.gitHubStats}
+                </p>
+
               </>
             )}
           </MyContext.Consumer>

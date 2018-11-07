@@ -1,0 +1,18 @@
+.statscontainer {
+  position: absolute;
+  top: 4em;
+  bottom: 4em;
+  left: 4em;
+  right: 4em;
+  background: #aae7b7;
+  border: 1px solid green;
+}
+
+.statscomponent {
+  width: 100%;
+  text-align: center;
+}
+
+.App-link {
+  color: #61dafb;
+}
