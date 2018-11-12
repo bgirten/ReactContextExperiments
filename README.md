@@ -13,7 +13,7 @@ React v16.3+ Context API           |Traditional "Prop Drilling"
 ## How to Install
 
 ### Clone the repo
-```git clone https://github.com/bgirten/stupid-React-Context-experiments.git```
+```git clone https://github.com/bgirten/clever-React-Context-tricks.git```
 
 ### Install the dependencies
 ```npm install```
