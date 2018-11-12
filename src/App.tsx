@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import './App.css'
 
 import StatsContainer from './StatsContainer'
@@ -12,8 +12,8 @@ const initialState = {
   decreaseClicks: (num: number) => {
     return (initialState.clicksCount -= num);
   },
-  updateGitHubStats : (stuff : string) => {
-    return (initialState.gitHubStats = stuff);
+  updateGitHubStats : (data: string) => {
+    return (initialState.gitHubStats = data);
   }
 };
 
