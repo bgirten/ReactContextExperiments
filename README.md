@@ -1,4 +1,4 @@
-# stupid React Context experiments Part 1
+# clever React Context experiments Part 1
 This experiment uses React 16.6, TypeScript 3+, and the new Context API.  The purpose of this experiment is to use the new
 Context API to manage state changes without Redux or "prop drilling".
 
